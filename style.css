@@ -51,3 +51,79 @@ a:link{
 a:visited{
     color:black;
 }
+a:hover{
+    color:white;
+}
+a:active{
+    color:blueviolet;
+    font-size:1.1em
+}
+p::selection{
+    color:darkblue;
+    background-color:gold;
+}
+
+.pagination{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position:fixed;
+    text-align: center;
+    width: 100%; /
+}
+.pagination a{
+    background-color: grey;
+    color: balck;
+    text-decoration: none;
+    padding: 8px 15px;
+    display:inline-block;
+}
+.pagination a.active{
+    background-color: green;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color:aquamarine;
+    border-radius: 5px;
+}
+.dropdown{
+    right:0;
+    position:fixed;
+    text-align:center;
+    margin:10px
+    
+}
+.dropdown button{
+    background-color: brown;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border:2px solid;
+}
+.dropdown .content{
+    display: none;
+    right:0;
+    position: fixed;
+    background-color:white;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    border: 2px solid;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown .content a:hover{
+    background-color: brown;
+}
+.dropdown:hover button{
+    background-color: grey;
+}
