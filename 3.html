@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel = "icon" type = "image/png" href = "image/icon.png">
-        <link rel="stylesheet" href = "style.css">
-        <title>My first Web Page(Probably not)</title>
-    </head>
-    <body>
-        <header>
-            <div class="dropdown">
-                <button>Menu</button>
-                <div class="content">
-                    <a href = "1.html">1</a>
-                    <a href = "2.html">2</a>
-                    <a href = "3.html">3</a>
 
-                    </a>
-                </div>
+<head>
+    <link rel="icon" type="image/png" href="image/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>My first Web Page(Probably not)</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="head1">Welcome to Nelson's Practice Website</h1>
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="content">
+                <a href="1.html">1</a>
+                <a href="2.html">2</a>
+                <a href="3.html">3</a>
+
+                </a>
             </div>
-            <h1>Welcome to Nelson's Practice Website</h1>
-            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank">About this Website</a>
-            <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank">About Me</a>
-        </header>
-        <h1>A Test Sentence</h1>
-        <div class="pagination">
-            <a href=""><</a>
-            <a href="1.html" >1</a>
-            <a href="2.html">2</a>
-            <a href="3.html" class = "active">3</a>
-            <a href="">></a>
         </div>
-    </body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="pagination">
+        <a href=""> &lt; </a>
+        <a href="1.html">1</a>
+        <a href="2.html">2</a>
+        <a href="3.html" class="active">3</a>
+        <a href="">></a>
+    </div>
+
+    <main>
+        <div id="login-box">
+            <h1 id="myH1">Login</h1>
+            <label>username:</label>
+            <input id="myText"><br><br>
+            <button id="mySubmit">submit</button>
+        </div>
+    </main>
+    <footer>
+        Author: Nelson<br>
+        &copy; 2024 Copyright Reserved <br>
+    </footer>
+    <script src="home.js"></script>
+</body>
+
 </html>
