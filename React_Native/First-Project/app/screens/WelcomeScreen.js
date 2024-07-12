@@ -1,28 +1,43 @@
 import React from "react";
-import { ImageBackground, StyleSheet, View, Button, Image } from "react-native";
-
+import {
+  ImageBackground,
+  StyleSheet,
+  View,
+  Button,
+  Image,
+  Alert,
+} from "react-native";
+import colors from "../config/colors";
+import AppText from "../components/AppText";
+import Entypo from "@expo/vector-icons/Entypo";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import AppButton from "../components/Button";
 function WelcomeScreen(props) {
   return (
     <ImageBackground
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
-      <Image
-        style={styles.Logo}
-        source={require("../assets/stadia_controller.png")}
-      />
+      <View style={styles.iconContainer}>
+        <Entypo name="game-controller" size={100} color={colors.primary} />
+        <MaterialCommunityIcons
+          name="gmail"
+          size={100}
+          color={colors.secondary}
+        />
+      </View>
+      <AppText>React Native</AppText>
       <View style={styles.loginButton}>
-        <Button
+        <AppButton
           title="Login"
-          onPress={() => console.log("Login")}
-          color="lightblue"
+          onPress={() => Alert.alert("Button Pressed!")}
         />
       </View>
       <View style={styles.RegisterButton}>
-        <Button
+        <AppButton
           title="Register"
-          onPress={() => console.log("Register")}
-          color="orange"
+          onPress={() => Alert.alert("Button Pressed!")}
+          color={colors.secondary}
         />
       </View>
     </ImageBackground>
@@ -37,16 +52,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
   },
-  loginButton: {
-    width: "100%",
-  },
-  RegisterButton: {
-    width: "100%",
-  },
   Logo: {
     width: 200,
     height: 200,
     position: "absolute",
     top: 300,
+    borderRadius: 100,
+    borderColor: colors.primary,
+    borderWidth: 10,
+  },
+  iconContainer: {
+    position: "absolute",
+    top: 100,
   },
 });

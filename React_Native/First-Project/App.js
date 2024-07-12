@@ -3,7 +3,7 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 function App(props) {
-  return <ViewImageScreen />;
+  return <WelcomeScreen />;
 }
 
 export default App;
