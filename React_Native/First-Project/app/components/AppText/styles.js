@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         fontFamily: "Avenir",
       },
       android: {
-        fontSize: 18,
+        fontSize: 30,
         fontFamily: "Roboto",
       },
     }),

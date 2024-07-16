@@ -1,15 +1,18 @@
 import { StyleSheet } from "react-native";
+import colors from "../../config/colors";
 
 const styles = StyleSheet.create({
+  container: {
+    width: "100%",
+  },
   button: {
     padding: 10,
-    borderRadius: 5,
     alignItems: "center",
-    width: 300,
+    width: "100%",
     borderRadius: 50,
   },
   buttonText: {
-    color: "white",
+    color: colors.white,
     fontSize: 16,
   },
 });

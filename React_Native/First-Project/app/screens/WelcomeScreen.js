@@ -6,6 +6,7 @@ import {
   Button,
   Image,
   Alert,
+  Text,
 } from "react-native";
 import colors from "../config/colors";
 import AppText from "../components/AppText";
@@ -25,15 +26,16 @@ function WelcomeScreen(props) {
           size={100}
           color={colors.secondary}
         />
+        <Text style={styles.text}>React Native</Text>
       </View>
-      <AppText>React Native</AppText>
-      <View style={styles.loginButton}>
+
+      <View style={styles.bottonsContainer}>
         <AppButton
           title="Login"
           onPress={() => Alert.alert("Button Pressed!")}
         />
       </View>
-      <View style={styles.RegisterButton}>
+      <View style={styles.bottonsContainer}>
         <AppButton
           title="Register"
           onPress={() => Alert.alert("Button Pressed!")}
@@ -64,5 +66,14 @@ const styles = StyleSheet.create({
   iconContainer: {
     position: "absolute",
     top: 100,
+    alignItems: "center",
+  },
+  bottonsContainer: {
+    width: "100%",
+  },
+  text: {
+    fontSize: 25,
+    fontWeight: "600",
+    color: colors.secondary,
   },
 });
