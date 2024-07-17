@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  ImageBackground,
-  StyleSheet,
-  View,
-  Button,
-  Image,
-  Alert,
-  Text,
-} from "react-native";
+import { ImageBackground, StyleSheet, View, Alert, Text } from "react-native";
 import colors from "../config/colors";
 import AppText from "../components/AppText";
 import Entypo from "@expo/vector-icons/Entypo";

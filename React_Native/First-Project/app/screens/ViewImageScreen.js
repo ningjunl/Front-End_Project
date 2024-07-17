@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import colors from "../config/colors";
 
-function screen2(props) {
+function Screen2(props) {
   return (
     <>
       <View style={styles.container}>
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default screen2;
+export default Screen2;
