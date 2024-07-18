@@ -15,6 +15,17 @@ header {
     background-color: transparent;
     text-align: center;
 }
+.nav1{
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    justify-content: space-between;
+    
+}
 
 footer {
     background-color: rgba(255, 255, 255, 0.1);
@@ -30,7 +41,7 @@ footer {
 h1 {
     /* border: 10px solid rgb(235, 223, 146);
     border-radius: 20px; */
-    text-shadow: 2px 1px 3px red, -2px -1px 3px blue;
+    text-shadow: 2px 1px 3px red;
     font-family: Papyrus, fantasy;
     font-size: 24px;
     font-style: normal;
@@ -107,8 +118,7 @@ p::selection {
 }
 
 .dropdown {
-    right: 0;
-    position: fixed;
+    position: relative;
     text-align: center;
     margin: 10px
 }
@@ -130,12 +140,12 @@ p::selection {
 
 .dropdown .content {
     display: none;
-    right: 0;
-    position: fixed;
+    position: absolute;
     background-color: white;
     min-width: 100px;
     box-shadow: 2px 2px 5px black;
     border: 2px solid;
+    right: 5px;
 }
 
 .dropdown:hover .content {
@@ -151,15 +161,12 @@ p::selection {
 }
 
 .navbar {
-
-    margin-top: 20px;
+    width: 100%;
     left: 0;
 }
 
 .navbar ul {
     list-style-type: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid black;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -175,7 +182,6 @@ p::selection {
 }
 
 .navbar a:hover {
-
     background-color: lightgrey;
 }
 

@@ -1,40 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="image/icon.png">
     <link rel="stylesheet" href="style.css">
     <title>My first Web Page(Probably not)</title>
+    <style>
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 0%;
+            position:relative;
+            top: 0px;
+        }
+        h1{
+            padding-top: 0%;
+        }
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-family:Papyrus ;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(119, 102, 5);
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #submitButton {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #submitButton:hover {
+            background-color: #0056b3;
+        }
+        .horizontal-radio {
+            display: flex;
+            align-items: center;
+        }
+
+        .horizontal-radio label {
+            margin-right: 10px;
+        }
+
+        .horizontal-radio input[type="radio"] {
+            margin-right: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Welcome to Nelson's Practice Website</h1>
-        <div class="dropdown">
-            <button>Menu</button>
-            <div class="content">
-                <a href="1.html">1</a>
-                <a href="2.html">2</a>
-                <a href="3.html">3</a>
-
-                </a>
+        <div class="nav1">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <button>Menu</button>
+                <div class="content">
+                    <a href="1.html">1</a>
+                    <a href="2.html">2</a>
+                    <a href="3.html">3</a>
+                </div>
             </div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
+    <div class="center">
+        <h1>Contact Me</h1>
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="horizontal-radio">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+            </div>
+        </fieldset>
+        <form>
+            <div>
+                <label for="user_first_name">First Name:</label>
+                <input type="text" id="user_first_name">
+            <div>
+                <label for="user_last_name">Last Name:</label>
+                <input type="text" id="user_last_name">
+            </div>
+            <div>
+                <label for="user_email">Email Address:</label>
+                <input type="email" id="user_email">
+            </div>
+            <div class="button-container">
+                <button id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
     <div class="pagination">
-        <a href=""> &lt; </a>
+        <a href="#"> &lt; </a>
         <a href="1.html">1</a>
         <a href="2.html">2</a>
         <a href="3.html" class="active">3</a>
-        <a href="">></a>
+        <a href="#"> &gt; </a>
     </div>
 </body>
+<hr>
+<footer>
+    Author: Nelson<br>
+    &copy; 2024 Copyright Reserved <br>
+</footer>
 
 </html>
