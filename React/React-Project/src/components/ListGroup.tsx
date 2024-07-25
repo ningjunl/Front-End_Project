@@ -1,15 +1,37 @@
-import { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+  onSelctedItem: (item: string, index: number) => void;
+}
+function ListGroup(props: ListGroupProps) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
-function ListGroup() { 
-    return <Fragment>
-        <ul className="list-group">
-          <li className="list-group-item">An item</li>
-          <li className="list-group-item">A second item</li>
-          <li className="list-group-item">A third item</li>
-          <li className="list-group-item">A fourth item</li>
-          <li className="list-group-item">And a fifth one</li>
-        </ul>
+  const alertClicked = (item: string, index: number) => {
+    setSelectedIndex(index);
+    props.onSelctedItem(item, index);
+  };
+
+  return (
+    <Fragment>
+      <h1>Hello World</h1>
+      <ul className="list-group">
+        {props.items.map((item, index) => (
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={item}
+            onClick={() => alertClicked(item, index)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
     </Fragment>
+  );
 }
 
 export default ListGroup;

@@ -1,5 +1,3 @@
-
-
 function Message() {
   return <div>Hello World!</div>;
 }
