@@ -1,20 +1,25 @@
-import Navbar from "./components/NavBar";
-import { useState } from "react";
-import Cart from "./components/Cart";
-import ExpenseList from "./expense-tracker/components/expenseList";
-function App() {
-  const [expenses, setExpenses] = useState([
-    { id: 1, description: "Groceries", amount: 100, category: "Food" },
-    { id: 2, description: "Dog", amount: 100, category: "Brian" },
-    { id: 3, description: "Father", amount: 100, category: "Peter" },
-    { id: 4, description: "Daughter", amount: 100, category: "Meg" },
-  ]);
+import React, { useEffect, useState } from "react";
+import { useRef } from "react";
+import ProductList from "./components/ProductList";
+const App = () => {
+  const [category, setCategory] = useState("");
 
+  useEffect(() => {
+    document.title = "React App";
+  });
   return (
-    <ExpenseList
-      expenses={expenses}
-      onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}
-    />
+    <div>
+      <select
+        className="form-select"
+        onChange={(event) => setCategory(event.target.value)}
+      >
+        <option value="  "></option>
+        <option value="Clothing">Clothing</option>
+        <option value="Household">Household</option>
+      </select>
+      <ProductList category={category} />
+    </div>
   );
-}
+};
+
 export default App;
